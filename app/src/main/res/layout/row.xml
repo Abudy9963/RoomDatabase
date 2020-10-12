@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/card"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="665656"
+            android:textSize="30dp"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/firstNameCard"/>
+
+        <TextView
+            android:id="@+id/ageNameCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="665656"
+            android:layout_margin="5dp"
+            android:textSize="30dp" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
