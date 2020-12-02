@@ -5,13 +5,15 @@
     android:layout_height="match_parent"
     tools:context=".AddFragment"
     android:orientation="vertical">
+
     <EditText
         android:id="@+id/firstNametxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:gravity="center"
-        android:textSize="40dp"/>
+        android:hint="First Name"
+        android:textSize="40dp" />
 
     <EditText
         android:id="@+id/lastNametxt"
@@ -19,7 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:gravity="center"
-        android:textSize="40dp"/>
+        android:hint="Last Name "
+        android:textSize="40dp" />
 
     <EditText
         android:id="@+id/agetxt"
@@ -27,7 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:gravity="center"
-        android:textSize="40dp"/>
+        android:hint="Age"
+        android:textSize="40dp" />
 
     <Button
         android:id="@+id/btnSave"

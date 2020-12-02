@@ -25,6 +25,7 @@ import androidx.room.RoomDatabase
                             PersonRoom::class.java,
                             "myDatabase")
                             .allowMainThreadQueries()
+                            .fallbackToDestructiveMigration()
                             .build()
                         return  INSTENCE
                     }

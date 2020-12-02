@@ -10,12 +10,6 @@ class Main2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        val fragmentList=FragmentList()
-        supportFragmentManager.beginTransaction()
-            .addToBackStack(null)
-            .add(R.id.fram,fragmentList)
-            .commit()
-
     }
 
 

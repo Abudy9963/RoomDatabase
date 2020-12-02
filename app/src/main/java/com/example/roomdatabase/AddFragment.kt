@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import androidx.navigation.Navigation
 import com.example.roomdatabase.data.Person
 import com.example.roomdatabase.data.PersonModel
 import kotlinx.coroutines.CoroutineScope
@@ -40,12 +41,13 @@ class AddFragment : Fragment() {
         if (b!=null){
             var firstName=   b.getString("firstName")
             var lastName=  b.getString("lastName")
-            var age= b.getInt("age")
+            var age= b.getString("age")
             id =  b.getInt("id")
 
             firstNametxt.setText(firstName)
             lastNametxt.setText(lastName)
-            agetxt.setText(age.toString())
+            agetxt.setText(age)
+            btnSave.setText("Update")
 
 
 
@@ -58,9 +60,11 @@ class AddFragment : Fragment() {
             var lastName = lastNametxt.text.toString()
             var age = agetxt.text.toString()
 
+
             if (id==0) {
 
-                var per = Person(0, firstNamr, lastName, age.toInt())
+
+                var per = Person(0, firstNamr, lastName, age)
 
                     personModel.inseert(per)
                     println("debug :${Thread.currentThread().name}")
@@ -70,18 +74,16 @@ class AddFragment : Fragment() {
 
             }else{
 
-                var per = Person(id, firstNamr, lastName, age.toInt())
+                var per = Person(id, firstNamr, lastName, age)
 
                     personModel.update(per)
 
 
 
 
+
             }
-            var fragmentList=FragmentList()
-           activity!!.supportFragmentManager.beginTransaction()
-               .replace(R.id.fram,fragmentList)
-               .commit()
+           Navigation.findNavController(v).navigate(R.id.action_addFragment_to_fragmentList)
         }
 
 

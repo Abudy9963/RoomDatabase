@@ -20,7 +20,7 @@ class Adapter(val list :List<Person>,val context: Context,val onItemClick: OnIte
     override fun onBindViewHolder(holder: Holder, position: Int) {
         val per=list[position]
         holder.firstTxt.text=per.firstName
-        holder.ageText.text=per.age.toString()
+        holder.ageText.text=per.age
 
 
         holder.card.setOnClickListener {
@@ -43,5 +43,7 @@ class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val firstTxt=itemView.firstNameCard
     val ageText=itemView.ageNameCard
     val card =itemView.card
+
+
 
 }

@@ -30,7 +30,7 @@ class PersonModel(application: Application):AndroidViewModel(application)  {
       fun inseert(person: Person){
          CoroutineScope(IO).launch {
              repository.insert(person)
-
+             println("************Insert***************${Thread.currentThread().name}")
          }
 
 
@@ -39,14 +39,14 @@ class PersonModel(application: Application):AndroidViewModel(application)  {
      fun update(person: Person){
          viewModelScope.launch (Dispatchers.IO){
             repository.updata(person)
-
+            println("*************Update****************${Thread.currentThread().name}")
         }
 
     }
      fun delete(person: Person){
         viewModelScope.launch (Dispatchers.IO){
             repository.delete(person)
-
+            println("*************Delete****************${Thread.currentThread().name}")
         }
     }
 
